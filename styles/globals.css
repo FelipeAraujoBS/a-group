@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #0a1f44;
+  --color-primary-blue: #2563eb;
+  --color-accent-cyan: #06b6d4;
+  --color-neutral-dark: #1f2937;
+  --color-neutral-medium: #6b7280;
+  --color-neutral-light: #f9fafb;
+}
+
+/* Classes utilitárias customizadas */
+@layer utilities {
+  /* Backgrounds */
+  .bg-primary-dark {
+    background-color: var(--color-primary-dark);
+  }
+  .bg-primary-blue {
+    background-color: var(--color-primary-blue);
+  }
+  .bg-accent-cyan {
+    background-color: var(--color-accent-cyan);
+  }
+  .bg-neutral-light {
+    background-color: var(--color-neutral-light);
+  }
+
+  /* Text colors */
+  .text-primary-dark {
+    color: var(--color-primary-dark);
+  }
+  .text-primary-blue {
+    color: var(--color-primary-blue);
+  }
+  .text-accent-cyan {
+    color: var(--color-accent-cyan);
+  }
+  .text-neutral-dark {
+    color: var(--color-neutral-dark);
+  }
+  .text-neutral-medium {
+    color: var(--color-neutral-medium);
+  }
+
+  /* Border colors */
+  .border-primary-blue {
+    border-color: var(--color-primary-blue);
+  }
+  .border-accent-cyan {
+    border-color: var(--color-accent-cyan);
+  }
+
+  /* Gradients */
+  .bg-gradient-primary {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary-dark) 0%,
+      var(--color-primary-blue) 100%
+    );
+  }
+  .bg-gradient-accent {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary-blue) 0%,
+      var(--color-accent-cyan) 100%
+    );
+  }
+
+  /* Text gradients */
+  .text-gradient-primary {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary-dark) 0%,
+      var(--color-primary-blue) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+}
