@@ -1,13 +1,23 @@
 @import "tailwindcss";
+@import "aos/dist/aos.css";
 
 @theme {
+  /** Light theme colors **/
   --color-primary-dark: #0a1f44;
   --color-primary-blue: #2563eb;
   --color-accent-cyan: #06b6d4;
   --color-neutral-dark: #1f2937;
   --color-neutral-medium: #6b7280;
   --color-neutral-light: #f9fafb;
+
+  /** Dark theme colors **/
+  --color-dark-bg: #0a0f1e;
+  --color-dark-card: #1a2332;
+  --color-dark-text: #e5e7eb;
+  --color-dark-border: #2d3748;
 }
+
+@variant dark (&:is(.dark, .dark *));
 
 /* Classes utilitárias customizadas */
 @layer utilities {
@@ -77,6 +87,20 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+
+/* Dark mode utilities */
+.dark-bg {
+  background-color: var(--color-dark-bg);
+}
+.dark-card {
+  background-color: var(--color-dark-card);
+}
+.dark-text {
+  color: var(--color-dark-text);
+}
+.dark-border {
+  border-color: var(--color-dark-border);
 }
 
 @layer base {

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import Link from "next/link";
 import { Container } from "../shared/Container";
 import { Section } from "../shared/Section";
@@ -96,17 +97,17 @@ const services = [
 
 export function ServicesPreview() {
   return (
-    <Section background="white">
+    <Section className="bg-white dark:bg-dark-bg">
       <Container>
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-blue-50 text-primary-blue rounded-full text-sm font-semibold mb-4">
+          <span className="inline-block px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-primary-blue dark:text-accent-cyan rounded-full text-sm font-semibold mb-4">
             Nossos Serviços
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-primary-dark mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-primary-dark dark:text-white mb-4">
             Soluções completas para sua empresa
           </h2>
-          <p className="text-xl text-neutral-medium max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-medium dark:text-gray-300 max-w-2xl mx-auto">
             Do planejamento ao deploy, oferecemos tudo que você precisa para ter
             sucesso no digital
           </p>
@@ -117,48 +118,42 @@ export function ServicesPreview() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              className="group relative bg-white dark:bg-dark-card rounded-2xl p-8 border border-gray-200 dark:border-dark-border hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
-              {/* Gradient background on hover */}
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
+                className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
               />
 
-              {/* Content */}
               <div className="relative z-10">
-                {/* Icon */}
                 <div
                   className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
                   {service.icon}
                 </div>
 
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-primary-dark mb-3">
+                <h3 className="text-2xl font-bold text-primary-dark dark:text-white mb-3">
                   {service.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-neutral-medium mb-6 leading-relaxed">
+                <p className="text-neutral-medium dark:text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
-                {/* Features */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-gray-100 text-neutral-dark text-sm rounded-full"
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-neutral-dark dark:text-gray-200 text-sm rounded-full transition-colors"
                     >
                       {feature}
                     </span>
                   ))}
                 </div>
 
-                {/* Link */}
                 <Link
                   href="/servicos"
-                  className="inline-flex items-center text-primary-blue font-semibold group-hover:gap-2 transition-all"
+                  className="inline-flex items-center text-primary-blue dark:text-accent-cyan font-semibold group-hover:gap-2 transition-all"
                 >
                   Saiba mais
                   <svg
@@ -184,7 +179,7 @@ export function ServicesPreview() {
         <div className="text-center">
           <Link
             href="/servicos"
-            className="inline-flex items-center justify-center px-8 py-4 bg-primary-blue text-white text-lg font-semibold rounded-lg hover:scale-105 transition-all duration-300 hover:shadow-xl"
+            className="inline-flex items-center justify-center px-8 py-4 bg-primary-blue dark:bg-accent-cyan text-white text-lg font-semibold rounded-lg hover:scale-105 transition-all duration-300 hover:shadow-xl"
           >
             Ver Todos os Serviços
             <svg
