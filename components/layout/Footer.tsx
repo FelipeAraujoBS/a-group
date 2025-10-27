@@ -1,6 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { Container } from "../shared/Container";
+import Image from "next/image";
+
+import github from "@/components/imgs/github.png";
+import instagram from "@/components/imgs/instagram.png";
+import linkedin from "@/components/imgs/linkedin.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -13,9 +18,17 @@ const navLinks = [
 const services = ["Sites Institucionais", "E-commerce", "Sistemas Web", "APIs"];
 
 const socialLinks = [
-  { label: "LinkedIn", href: "#" },
-  { label: "GitHub", href: "#" },
-  { label: "Instagram", href: "#" },
+  {
+    img: linkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/felipe-de-araujo-b87386231/",
+  },
+  { img: github, label: "GitHub", href: "https://github.com/FelipeAraujoBS" },
+  {
+    img: instagram,
+    label: "Instagram",
+    href: "https://www.instagram.com/felipearaujo25/",
+  },
 ];
 
 export function Footer() {
@@ -50,10 +63,16 @@ export function Footer() {
                   <a
                     key={social.label}
                     href={social.href}
-                    className="w-11 h-11 rounded-lg flex items-center justify-center text-sm font-semibold text-white border border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all hover:scale-110"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-lg flex items-center justify-center text-sm font-semibold text-white  backdrop-blur-sm transition-all hover:scale-110"
                     aria-label={social.label}
                   >
-                    {social.label.slice(0, 2)}
+                    <Image
+                      className="hover:scale-105"
+                      src={social.img}
+                      alt={social.label}
+                    />
                   </a>
                 ))}
               </div>
