@@ -19,12 +19,19 @@ const services = ["Sites Institucionais", "E-commerce", "Sistemas Web", "APIs"];
 
 const socialLinks = [
   {
+    id: 1,
     img: linkedin,
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/felipe-de-araujo-b87386231/",
   },
-  { img: github, label: "GitHub", href: "https://github.com/FelipeAraujoBS" },
   {
+    id: 2,
+    img: github,
+    label: "GitHub",
+    href: "https://github.com/FelipeAraujoBS",
+  },
+  {
+    id: 3,
     img: instagram,
     label: "Instagram",
     href: "https://www.instagram.com/felipearaujo25/",
@@ -61,7 +68,7 @@ export function Footer() {
               <div className="flex gap-3">
                 {socialLinks.map((social) => (
                   <a
-                    key={social.label}
+                    key={social.id}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
