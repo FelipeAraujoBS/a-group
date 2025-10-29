@@ -110,72 +110,76 @@ export function MissionVisionValues() {
             escrevemos
           </p>
         </div>
-
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {pillars.map((pillar, index) => (
-            <div
-              key={index}
-              className="relative bg-white dark:bg-dark-card rounded-2xl p-8 border border-gray-200 dark:border-dark-border hover:shadow-xl transition-all duration-300"
-            >
-              {/* Icon */}
+          {pillars.map((pillar, index) => {
+            const animations = ["fade-right", "zoom-in", "fade-left"];
+            const animation = animations[index % animations.length];
+
+            return (
               <div
-                className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${pillar.color} text-white mb-6`}
+                key={index}
+                data-aos={animation}
+                className="relative bg-white dark:bg-dark-card rounded-2xl p-8 border border-gray-200 dark:border-dark-border hover:shadow-xl transition-all duration-300"
               >
-                {pillar.icon}
+                {/* Icon */}
+                <div
+                  className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${pillar.color} text-white mb-6`}
+                >
+                  {pillar.icon}
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-primary-dark dark:text-white mb-4">
+                  {pillar.title}
+                </h3>
+
+                {/* Description or Values list */}
+                {pillar.description ? (
+                  <p className="text-neutral-medium dark:text-gray-400 leading-relaxed">
+                    {pillar.description}
+                  </p>
+                ) : (
+                  <ul className="space-y-4">
+                    {values.map((value, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center mt-0.5">
+                          <svg
+                            className="w-4 h-4 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-primary-dark dark:text-white mb-1">
+                            {value.name}
+                          </h4>
+                          <p className="text-sm text-neutral-medium dark:text-gray-400">
+                            {value.description}
+                          </p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {/* Decorative gradient */}
+                <div
+                  className={`absolute -top-px -right-px w-32 h-32 bg-gradient-to-br ${pillar.color} opacity-5 rounded-tr-2xl rounded-bl-full`}
+                />
               </div>
-
-              {/* Title */}
-              <h3 className="text-2xl font-bold text-primary-dark dark:text-white mb-4">
-                {pillar.title}
-              </h3>
-
-              {/* Description or Values list */}
-              {pillar.description ? (
-                <p className="text-neutral-medium dark:text-gray-400 leading-relaxed">
-                  {pillar.description}
-                </p>
-              ) : (
-                <ul className="space-y-4">
-                  {values.map((value, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center mt-0.5">
-                        <svg
-                          className="w-4 h-4 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-primary-dark dark:text-white mb-1">
-                          {value.name}
-                        </h4>
-                        <p className="text-sm text-neutral-medium dark:text-gray-400">
-                          {value.description}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
-
-              {/* Decorative gradient */}
-              <div
-                className={`absolute -top-px -right-px w-32 h-32 bg-gradient-to-br ${pillar.color} opacity-5 rounded-tr-2xl rounded-bl-full`}
-              />
-            </div>
-          ))}
+            );
+          })}
         </div>
-
-        {/* Bottom Quote */}
+        ;{/* Bottom Quote */}
         <div className="max-w-3xl mx-auto text-center p-8 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-2xl border-l-4 border-primary-blue">
           <p className="text-lg md:text-xl text-primary-dark dark:text-white font-medium leading-relaxed">
             "Cada projeto que desenvolvemos é uma oportunidade de transformar

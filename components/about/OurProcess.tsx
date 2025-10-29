@@ -141,6 +141,7 @@ export function OurProcess() {
             {steps.map((step, index) => (
               <div
                 key={index}
+                data-aos={index % 2 ? "fade-left" : "fade-right"}
                 className={`relative flex flex-col md:flex-row gap-8 items-center ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}

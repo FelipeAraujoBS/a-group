@@ -99,7 +99,7 @@ export function Testimonials() {
             {visibleTestimonials.map((testimonial, index) => (
               <div
                 key={testimonial.name}
-                className="min-w-[calc(33.333%-1rem)] bg-white dark:bg-dark-card rounded-2xl p-8 border border-gray-200 dark:border-dark-border hover:shadow-xl transition-all duration-300"
+                className="min-w-[calc(33.333%-1rem)] bg-white dark:bg-dark-card rounded-2xl p-8 border border-gray-200 dark:border-dark-border hover:shadow-xl transition-all duration-300 animate-smooth-fade"
               >
                 {/* Quote icon */}
                 <svg

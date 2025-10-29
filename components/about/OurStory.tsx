@@ -18,7 +18,7 @@ export function OurStory() {
           </div>
 
           {/* Story Content */}
-          <div className="space-y-8">
+          <div className="space-y-8" data-aos="fade-down">
             {/* Parágrafo 1 - Origem */}
             <div className="relative pl-8 border-l-4 border-primary-blue">
               <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary-blue border-4 border-white dark:border-dark-bg" />
