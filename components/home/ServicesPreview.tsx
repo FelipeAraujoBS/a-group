@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { Container } from "../shared/Container";
 import { Section } from "../shared/Section";
+import { useState } from "react";
 
 const services = [
   {
+    id: "sites",
     icon: (
       <svg
         className="w-8 h-8"
@@ -28,6 +30,7 @@ const services = [
     color: "from-blue-500 to-blue-600",
   },
   {
+    id: "ecommerce",
     icon: (
       <svg
         className="w-8 h-8"
@@ -50,6 +53,7 @@ const services = [
     color: "from-cyan-500 to-cyan-600",
   },
   {
+    id: "sistemas",
     icon: (
       <svg
         className="w-8 h-8"
@@ -72,6 +76,7 @@ const services = [
     color: "from-indigo-500 to-indigo-600",
   },
   {
+    id: "apis",
     icon: (
       <svg
         className="w-8 h-8"
@@ -152,7 +157,7 @@ export function ServicesPreview() {
                 </div>
 
                 <Link
-                  href="/servicos"
+                  href={`/servicos/#services`}
                   className="inline-flex items-center text-primary-blue dark:text-accent-cyan font-semibold group-hover:gap-2 transition-all"
                 >
                   Saiba mais
