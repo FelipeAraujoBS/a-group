@@ -29,6 +29,7 @@ const servicesData = [
     fullDescription:
       "Criamos sites institucionais que representam sua marca com elegância e modernidade. Design responsivo, otimizado para SEO e com performance excepcional. Cada projeto é desenvolvido pensando na experiência do usuário e nos objetivos de negócio.",
     color: "from-blue-500 to-blue-600",
+    staticColor: "blue",
     features: [
       "Design personalizado e responsivo",
       "Otimização para motores de busca (SEO)",
@@ -76,6 +77,7 @@ const servicesData = [
     fullDescription:
       "Desenvolvemos lojas virtuais completas e prontas para vender. Integração com meios de pagamento, gestão de produtos, controle de estoque e muito mais. Plataforma robusta e escalável para o crescimento do seu negócio online.",
     color: "from-cyan-500 to-cyan-600",
+    staticColor: "cyan",
     features: [
       "Catálogo de produtos completo",
       "Carrinho de compras intuitivo",
@@ -126,6 +128,7 @@ const servicesData = [
     fullDescription:
       "Desenvolvemos sistemas web sob medida para atender necessidades específicas do seu negócio. Dashboards interativos, CRMs personalizados, ERPs simplificados e plataformas de gestão completas. Automatize processos e ganhe eficiência operacional.",
     color: "from-indigo-500 to-indigo-600",
+    staticColor: "indigo",
     features: [
       "Desenvolvimento 100% sob medida",
       "Dashboards interativos e relatórios",
@@ -176,6 +179,7 @@ const servicesData = [
     fullDescription:
       "Desenvolvemos APIs REST robustas e bem documentadas para conectar seus sistemas. Integrações com plataformas terceiras, webhooks, automações e microserviços. Sincronize dados entre diferentes plataformas e automatize fluxos de trabalho.",
     color: "from-purple-500 to-purple-600",
+    staticColor: "purple",
     features: [
       "APIs REST escaláveis",
       "Documentação completa (Swagger/OpenAPI)",
@@ -214,8 +218,6 @@ export function ServicesOverview() {
   const openModal = (service: (typeof servicesData)[0]) => {
     setSelectedService(service);
     setIsModalOpen(true);
-
-    console.log(service.id);
   };
 
   const closeModal = () => {

@@ -15,6 +15,7 @@ interface ServiceModalProps {
     technologies: string[];
     idealFor: string[];
     color: string;
+    staticColor: string;
   };
 }
 
@@ -36,6 +37,14 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
 
   if (!isOpen) return null;
 
+  const hoverColor =
+    {
+      blue: "hover:bg-blue-500 dark:hover:bg-blue-500",
+      cyan: "hover:bg-cyan-500 dark:hover:bg-cyan-500",
+      indigo: "hover:bg-indigo-500 dark:hover:bg-indigo-500",
+      purple: "hover:bg-purple-500 dark:hover:bg-purple-500",
+    }[service.staticColor] ?? "";
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
@@ -49,7 +58,7 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="sticky top-4 right-4 float-right z-10 p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          className={`sticky cursor-pointer top-4 right-4 float-right z-10 p-2 rounded-lg bg-gray-100 dark:bg-gray-800 ${hoverColor} transition-colors`}
           aria-label="Close modal"
         >
           <svg
@@ -174,7 +183,7 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
               </a>
               <button
                 onClick={onClose}
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-neutral-dark dark:text-white text-lg font-semibold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
+                className="inline-flex cursor-pointer items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-neutral-dark dark:text-white text-lg font-semibold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
               >
                 Fechar
               </button>
