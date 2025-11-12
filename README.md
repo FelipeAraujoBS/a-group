@@ -108,4 +108,5 @@ Este projeto está licenciado sob a licença MIT — veja o arquivo LICENSE para
 Felipe de Araújo
 
 Linkedin: https://www.linkedin.com/in/felipe-de-araujo-b87386231/
+
 Github: https://github.com/FelipeAraujoBS
