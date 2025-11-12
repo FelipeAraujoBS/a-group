@@ -57,9 +57,9 @@ export function Footer() {
             <div className="md:col-span-2">
               <h3 className="text-3xl font-bold text-white mb-4">
                 <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  A
+                  Ar
                 </span>{" "}
-                Group
+                Studio
               </h3>
               <p className="text-gray-300 text-base mb-6 max-w-md leading-relaxed">
                 Seu hub de soluções tecnológicas. Transformamos ideias em
@@ -135,7 +135,7 @@ export function Footer() {
                   href="mailto:contato@agroup.com"
                   className="text-xl font-semibold text-white hover:text-gray-200 transition-colors"
                 >
-                  contato@agroup.com
+                  @agroup.com
                 </a>
               </div>
               <div className="md:text-right">

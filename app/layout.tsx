@@ -8,7 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "A Group - Seu hub de soluções tecnológicas",
+  title: "Ar Studio",
   description:
     "Desenvolvimento de sites, sistemas web e APIs personalizados para pequenas e médias empresas.",
 };

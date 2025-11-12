@@ -23,12 +23,13 @@ export function OurStory() {
             <div className="relative pl-8 border-l-4 border-primary-blue">
               <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary-blue border-4 border-white dark:border-dark-bg" />
               <p className="text-lg text-neutral-dark dark:text-gray-300 leading-relaxed">
-                A <strong className="text-primary-blue">A Group</strong> nasceu
-                da experiência de trabalhar com pequenas e médias empresas que
-                enfrentavam dificuldades para encontrar soluções tecnológicas
-                acessíveis e de qualidade. Percebemos que muitos negócios tinham
-                grandes ideias, mas não conseguiam transformá-las em realidade
-                digital por falta de parceiros confiáveis.
+                A <strong className="text-primary-blue">Ar Studio</strong>{" "}
+                nasceu da experiência de trabalhar com pequenas e médias
+                empresas que enfrentavam dificuldades para encontrar soluções
+                tecnológicas acessíveis e de qualidade. Percebemos que muitos
+                negócios tinham grandes ideias, mas não conseguiam
+                transformá-las em realidade digital por falta de parceiros
+                confiáveis.
               </p>
             </div>
 

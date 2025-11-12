@@ -39,10 +39,10 @@ export function Header() {
           <Link href="/" className="flex items-center group">
             <div className="relative">
               <span className="text-3xl font-bold text-gradient-primary">
-                A
+                Ar
               </span>
               <span className="text-2xl font-semibold ml-1 text-primary-dark dark:text-white">
-                Group
+                Studio
               </span>
               <div className="absolute -bottom-1 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-300 bg-accent-cyan" />
             </div>

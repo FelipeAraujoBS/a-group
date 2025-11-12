@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# a-group
 
-## Getting Started
+## 🎯 Visão Geral
 
-First, run the development server:
+[a-group] é uma aplicação web construída com Next.js e TypeScript, cuja finalidade é **(adicione aqui a descrição: ex: gerenciar grupos de trabalho, organizar projetos colaborativos, etc.)**.  
+O foco deste projeto é demonstrar habilidades de full-stack moderno (frontend + backend) e arquitetura web escalável.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🧰 Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js (app router)
+- TypeScript
+- (adicione backend se houver: API, banco de dados, etc)
+- CSS / (ou Tailwind / styled-components conforme usado)
+- Outras libs: (adicione se usar: Axios, Zustand, SWR, etc)
+- Ferramentas de Dev: ESLint, Prettier, etc
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Funcionalidades Principais
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [x] Página inicial com listagem de grupos/projetos
+- [x] Criação, edição e exclusão de grupos (CRUD)
+- [x] Autenticação / autorização (se aplicável)
+- [x] Responsivo para dispositivos móveis
+- [x] Deploy automático (ex: Vercel)
+- (adicione outras funcionalidades específicas)
 
-## Learn More
+## 📂 Estrutura do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+/app – lógica de páginas e roteamento
+/components – componentes reutilizáveis
+/config – configurações do projeto
+/lib – utilitários/helpers
+/public – assets públicos (ícones, imagens)
+/styles – estilos globais ou tema
+/types – definições de TypeScript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧪 Instalação e Execução Local
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone o repositório:
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/FelipeAraujoBS/a-group.git
+   cd a-group
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Instale as dependências:
+   npm install
+
+   # ou
+
+   yarn
+
+3. Execute no modo de desenvolvimento:
+   npm run dev
+
+   # ou
+
+   yarn dev
+
+4. Abra http://localhost:3000 no navegador.
+
+🛠️ Deploy
+
+O projeto está configurado para deploy com Vercel (ou outro serviço). Basta conectar o repositório e o CI/CD automática iniciará após cada commit para a branch main.
+
+✅ Como contribuir
+
+1. Faça o fork do projeto.
+
+2. Crie uma branch para sua feature: git checkout -b feature/nome-da-feature
+
+3. Commit suas mudanças: git commit -m "feat: descrição da feature"
+
+4. Envie para o repositório remoto: git push origin feature/nome-da-feature
+
+5. Abra um Pull Request e descreva sua mudança.
+
+📝 Melhores Práticas e Testes
+
+-Uso de ESLint + Prettier para manter o código limpo e consistente.
+
+-(Se aplicável) Incluído testes unitários e de integração.
+
+-(Se aplicável) Coverage de testes com relatório.
+
+-Componentização clara e modular para facilitar manutenção.
+
+🧭 Próximos Passos / Roadmap
+
+-Integração de API de backend para persistência de dados (ex: PostgreSQL + Prisma)
+
+-Autenticação com JWT ou OAuth
+
+-Integração com sistema de notificações em tempo real (WebSockets)
+
+-Versão mobile-first ou PWA
+
+-Dashboard de analytics com gráficos
+
+📄 Licença
+
+Este projeto está licenciado sob a licença MIT — veja o arquivo LICENSE para mais detalhes.
+
+👤 Autor
+
+Felipe de Araújo
+Linkedin: https://www.linkedin.com/in/felipe-de-araujo-b87386231/
+Github: https://github.com/FelipeAraujoBS
