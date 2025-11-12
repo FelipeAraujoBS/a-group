@@ -44,16 +44,18 @@ O foco deste projeto é demonstrar habilidades de full-stack moderno (frontend +
    ```
 
 2. Instale as dependências:
+
    npm install
 
-   # ou
+   ou
 
    yarn
 
 3. Execute no modo de desenvolvimento:
+
    npm run dev
 
-   # ou
+   ou
 
    yarn dev
 
@@ -104,5 +106,6 @@ Este projeto está licenciado sob a licença MIT — veja o arquivo LICENSE para
 👤 Autor
 
 Felipe de Araújo
+
 Linkedin: https://www.linkedin.com/in/felipe-de-araujo-b87386231/
 Github: https://github.com/FelipeAraujoBS
