@@ -1,4 +1,4 @@
-# a-group
+# Ar-Studio
 
 ## 🎯 Visão Geral
 
